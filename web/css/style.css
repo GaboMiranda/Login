@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9/08/2017, 05:31:43 PM
+    Author     : andres
+*/
+
+.fondo-inicio{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(54,130,255,.5);
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-top: 10;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    box-shadow: inset -4px -4px rgba(145,145,145,.5);
+}
+
+.fondo-registro{
+    width: 300px;
+    height: 500px;
+    background-color: rgba(54,130,255,.5);
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-top: 10;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    box-shadow: inset -4px -4px rgba(145,145,145,.5);
+}
+
+.body{
+    background-image: url("http://bioinformati.co/files/dna-desktop-black-2880x1800.png");
+    background-color: black;
+    background-size: cover;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.h1{
+    margin-top: 30px;
+}
+
+a{
+    color: white;
+}
+
+
