@@ -27,7 +27,7 @@
                 <input type="password" class="form-control" name="pass" placeholder="Contraseña"/>
                 <input type="text" class="form-control" name="tel" placeholder="Teléfono"/>
                 <input type="text" class="form-control" name="correo" placeholder="Correo electrónico"/>
-                <input class="btn-primary form-control" type="submit" value="Registrarme" />
+                <input class="btn btn-primary form-control" type="submit" value="Registrar" />
             </form>
         </div>
                 <div class="col-sm-4">    

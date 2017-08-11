@@ -27,6 +27,7 @@
     <body class="body">
         <h1 class="h1">Acceso satisfactorio <%out.print(usuario);%> </h1><br>
         <a href="menu2.jsp">menu2</a>
+        <a href="registro.jsp">Regístrate.</a><br>
         <form action="salir" method="post">
             <input type="submit" class="btn-danger" value="Cerrar sesión" />
         </form>
