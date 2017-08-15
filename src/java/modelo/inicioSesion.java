@@ -33,17 +33,21 @@ public class inicioSesion extends HttpServlet {
         throws ServletException, IOException {
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
-            
-            String usuario = request.getParameter("usuario");
+            //Se crean dos variables las cuales contendrán los datos para iniciar sesión que son usuario y password.
+            String usuario = request.getParameter("usuario"); 
             String pass = request.getParameter("pass");
-            
+            //Se crea una instancia de la clase Consultas.
             Consultas con = new Consultas();
-            
+            //Se realiza la llamada al método autenticacion que se encuentra en la clase Consultas, que nos devolverá un booleano dependiendo 
+            //si se encontró el usuario y contraseña, entre un true o false 
             if(con.autenticacion(usuario, pass)){
+            //Se crea una instancia de HttpSession.
                 HttpSession objsesion = request.getSession(true);
+                //Se envía a la instancia de HttpSession el valor de la variable usuario una vez que ya ha sido validado. 
                 objsesion.setAttribute("usuario", usuario);
                 response.sendRedirect("menu.jsp");
             }else
+                //Si el resultado de la consulta es false se redirecciona a la página inicial que es el index.html
                 response.sendRedirect("index.jsp");
             
         }

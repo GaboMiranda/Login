@@ -32,7 +32,8 @@ public class notFound extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            response.sendRedirect("pageNotFound.jsp");
+            response.sendRedirect("pageNotFound.jsp"); //Sí en la barra de direcciones es ingreasada una url no existente o que no puede ser encontrada por el servidor, 
+            //mandará a este servelet el cual nos dirijirá a pageNotFound.jsp en la cual se muestra un mensaje de error. 
         } finally { 
             out.close();
         }

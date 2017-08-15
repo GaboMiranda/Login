@@ -33,9 +33,9 @@
         <url-pattern>/urlNotFound</url-pattern>
     </servlet-mapping>
     <error-page>
-<error-code>404</error-code>
-<location>/urlNotFound</location>
-</error-page>
+        <error-code>404</error-code>
+        <location>/urlNotFound</location>
+    </error-page>
     <session-config>
         <session-timeout>
             30
