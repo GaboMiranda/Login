@@ -12,6 +12,10 @@
         <servlet-name>cerrarSesion</servlet-name>
         <servlet-class>modelo.cerrarSesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>notFound</servlet-name>
+        <servlet-class>modelo.notFound</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>inicioSesion</servlet-name>
         <url-pattern>/iniciar</url-pattern>
