@@ -22,14 +22,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/bootstrap.css"/>
         <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/jquery-3.2.1.min.js" lenguaje="javascript" type="text/javascript"></script>
+        <script src="js/usuarios.js" lenguaje="javascript" type="text/javascript"></script>
         <title>JSP Page</title>
     </head>
     <body class="body">
-        <h1 class="h1">Acceso satisfactorio <%out.print(usuario);%> </h1><br>
-        <a href="menu2.jsp">menu2</a>
-        <a href="registro.jsp">Regístrate.</a><br>
         <form action="salir" method="post">
             <input type="submit" class="btn-danger" value="Cerrar sesión" />
         </form>
+        <br /><input type="button" id="agregar" value="agregar usuario"/>
+        <section id="contenedor"></section>
     </body>
 </html>
