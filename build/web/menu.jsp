@@ -30,7 +30,6 @@
         <form action="salir" method="post">
             <input type="submit" class="btn-danger" value="Cerrar sesión" />
         </form>
-        <br /><input type="button" id="agregar" value="agregar usuario"/>
-        <section id="contenedor"></section>
+        <section id="contenedor"><input type="button" id="agregar" value="agregar usuario"/></section>
     </body>
 </html>
