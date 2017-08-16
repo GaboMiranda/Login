@@ -13,7 +13,6 @@
     if(usuario.equals("")){
         response.sendRedirect("index.html");
     }
-
 %>
 
 <!DOCTYPE html>
