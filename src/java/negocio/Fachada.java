@@ -51,6 +51,10 @@ import java.util.Collection;
 //import datos.DolorSemanaDAO;
 //import java.util.ArrayList;
 //import modelo.DolorSemanaDTO;
+import datos.ConsultaDAO;
+
+import datos.usuariosDAO;
+import modelo.UsuariosDTO;
 
 
 /**
@@ -65,6 +69,8 @@ public class Fachada {
     errorB = false;
     errorStr = "";
   }
+  
+  
      
   /**
    *
@@ -257,7 +263,24 @@ public class Fachada {
 //        errorStr = dolor.getErrorStr();
 //        return query;
 //      }       
-//     
+//   
+
+// USUARIOS
+  public boolean registrarUsuario(UsuariosDTO us){
+      ConsultaDAO con = new ConsultaDAO();
+      return con.registrarUsuario(us);
+  }
+  
+  public boolean autenticarUsuario(UsuariosDTO us){
+      ConsultaDAO con = new ConsultaDAO();
+      return con.autenticacionUsuario(us); 
+  }
+  
+  
+  
+  
+  
+  
     /**
    * Devuelve la variable de errror "booleana"
    *

@@ -11,7 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import datos.Consultas;
+import datos.ConsultaDAO;
+import negocio.Fachada;
 
 /**
  *
@@ -44,8 +45,8 @@ public class registrarUsuarios extends HttpServlet {
         us.setCorreo(request.getParameter("correo"));
         us.setNivel( Integer.parseInt(request.getParameter("nivel")));
         
-        Consultas con = new Consultas();
-        if(con.registrar(us))
+        Fachada fa = new Fachada();
+            if(fa.registrarUsuario(us))
             response.sendRedirect("index.jsp");
         else
             response.sendRedirect("registrarUsuarios.jsp");
