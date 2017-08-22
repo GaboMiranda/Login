@@ -7,7 +7,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <% 
-
     HttpSession objsesion = request.getSession(false);
     String usuario = (String)objsesion.getAttribute("usuario");
     if(usuario.equals("")){

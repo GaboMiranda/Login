@@ -33,16 +33,19 @@ public class registrarUsuarios extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        String nombre = request.getParameter("nombre");
-        String aPaterno = request.getParameter("aPaterno");
-        String aMaterno = request.getParameter("aMaterno");
-        String usuario = request.getParameter("usuario");
-        String pass = request.getParameter("pass");
-        String tel = request.getParameter("tel");
-        String correo = request.getParameter("correo");
+        UsuariosDTO us = new UsuariosDTO();
+        
+        us.setNombre(request.getParameter("nombre"));
+        us.setaPaterno(request.getParameter("aPaterno"));
+        us.setaMaterno(request.getParameter("aMaterno"));
+        us.setUsuario(request.getParameter("usuario"));
+        us.setPass(request.getParameter("pass"));
+        us.setTel(request.getParameter("tel"));
+        us.setCorreo(request.getParameter("correo"));
+        us.setNivel( Integer.parseInt(request.getParameter("nivel")));
         
         Consultas con = new Consultas();
-        if(con.registrar(nombre, aPaterno, aMaterno, usuario, pass, tel, correo))
+        if(con.registrar(us))
             response.sendRedirect("index.jsp");
         else
             response.sendRedirect("registrarUsuarios.jsp");

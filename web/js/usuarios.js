@@ -35,8 +35,9 @@ function registro(){
                     "<input type='text' class='form-control' name='aMaterno' placeholder='Apellido materno'/>"+
                     "<input type='text' class='form-control' name='usuario' placeholder='Usuario' required autocomplete='off' />"+
                     "<input type='password' class='form-control' name='pass' placeholder='Contraseña'required />"+
-                    "<input type='text' class='form-control' name='tel' placeholder='Teléfono'/>"+
-                    "<input type='text' class='form-control' name='correo' placeholder='Correo electrónico' required autocomplete='off' />"+
+                    "<input type='tel' class='form-control' name='tel' placeholder='Teléfono'/>"+
+                    "<input type='email' class='form-control' name='correo' placeholder='Correo electrónico' required autocomplete='off' />"+
+                    "<input type'number' class='' name='nivel' min='1' required/>"+
                     "<input class='btn btn-primary form-control' type='submit' value='Registrar' />"+
                     "<a class='btn btn-danger form-control' href='menu.jsp' value='Cancelar'>Cancelar</a>"+
                 "</form>"+

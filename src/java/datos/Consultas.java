@@ -8,6 +8,7 @@ import datos.Conexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import modelo.UsuariosDTO;
 
 /**
  *
@@ -50,18 +51,20 @@ public class Consultas extends Conexion{
         return false;
     }
     
-    public boolean registrar(String nombre, String aPaterno,String aMaterno, String usuario, String pass,String tel, String correo){
+    public boolean registrar(UsuariosDTO us){
         PreparedStatement pst = null;
         try{
-            String consulta = "insert into usuarios (nombre, a_paterno, a_materno, usuario, password, tel, correo) values(?,?,?,?,?,?,?)";
+            String consulta = "insert into usuarios (nombre, a_paterno, a_materno, usuario, password, tel, correo, nivel) values(?,?,?,?,?,?,?,?)";
             pst = getConexion().prepareStatement(consulta);
-            pst.setString(1, nombre);
-            pst.setString(2, aPaterno);
-            pst.setString(3, aMaterno);
-            pst.setString(4, usuario);
-            pst.setString(5, pass);
-            pst.setString(6, tel);
-            pst.setString(7, correo);
+            pst.setString(1, us.getNombre());
+            pst.setString(2, us.getaPaterno());
+            pst.setString(3, us.getaMaterno());
+            pst.setString(4, us.getUsuario());
+            pst.setString(5, us.getPass());
+            pst.setString(6, us.getTel());
+            pst.setString(7, us.getCorreo());
+            pst.setInt(8, us.getNivel());
+            
             
             if(pst.executeUpdate() == 1) return true;
             
