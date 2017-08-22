@@ -17,8 +17,7 @@ package datos;
 //import java.util.Date;
 
 //import modelo.ConsultaDTO;
-import conexion.Conexion;
-import static conexion.Conexion.getConexion;
+import datos.Conexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,7 +26,7 @@ import modelo.UsuariosDTO;
  *
  * @author SChaves
  */
-public class ConsultaDAO {
+public class ConsultaDAO extends Conexion{
     private static String tabla = "consulta";
     private boolean errorB;
     private String errorStr;
