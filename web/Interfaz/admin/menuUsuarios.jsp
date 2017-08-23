@@ -10,7 +10,7 @@
     HttpSession objsesion = request.getSession(false);
     String usuario = (String)objsesion.getAttribute("usuario");
     if(usuario.equals("")){
-        response.sendRedirect("index.html");
+        response.sendRedirect("../index.html");
     }
 %>
 
@@ -18,10 +18,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/bootstrap.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <script src="js/jquery-3.2.1.min.js" lenguaje="javascript" type="text/javascript"></script>
-        <script src="js/usuarios.js" lenguaje="javascript" type="text/javascript"></script>
+        <link rel="stylesheet" href="../../css/bootstrap.css"/>
+        <link rel="stylesheet" href="../../css/style.css"/>
+        <script src="../../js/jquery-3.2.1.min.js" lenguaje="javascript" type="text/javascript"></script>
+        <script src="../../js/usuarios.js" lenguaje="javascript" type="text/javascript"></script>
         <title>JSP Page</title>
     </head>
     <body class="body">

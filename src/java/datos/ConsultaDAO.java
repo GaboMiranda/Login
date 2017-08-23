@@ -307,7 +307,7 @@ public class ConsultaDAO extends Conexion{
     public boolean registrarUsuario(UsuariosDTO us){
         PreparedStatement pst = null;
         try{
-            String consulta = "insert into usuarios (nombre, a_paterno, a_materno, usuario, password, tel, correo, nivel) values(?,?,?,?,?,?,?,?)";
+            String consulta = "insert into usuarios (nombre, a_paterno, a_materno, usuario, password, tel, correo, nivel, estatus) values(?,?,?,?,?,?,?,?,?)";
             pst = getConexion().prepareStatement(consulta);
             pst.setString(1, us.getNombre());
             pst.setString(2, us.getaPaterno());
@@ -317,6 +317,7 @@ public class ConsultaDAO extends Conexion{
             pst.setString(6, us.getTel());
             pst.setString(7, us.getCorreo());
             pst.setInt(8, us.getNivel());
+            pst.setInt(9, 1);
             
             
             if(pst.executeUpdate() == 1) return true;

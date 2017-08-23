@@ -47,9 +47,9 @@ public class registrarUsuarios extends HttpServlet {
         
         Fachada fa = new Fachada();
             if(fa.registrarUsuario(us))
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("../index.jsp");
         else
-            response.sendRedirect("registrarUsuarios.jsp");
+            response.sendRedirect("menuUsuarios.jsp");
         
     }
 

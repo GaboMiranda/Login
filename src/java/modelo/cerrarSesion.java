@@ -35,7 +35,7 @@ public class cerrarSesion extends HttpServlet {
         HttpSession objsesion = request.getSession(false);
         objsesion.setAttribute("usuario", "");
 //        objsesion.removeAttribute("usuario");
-        response.sendRedirect("index.html");
+        response.sendRedirect("../index.html");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

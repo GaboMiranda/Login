@@ -46,7 +46,7 @@ public class inicioSesion extends HttpServlet {
                 HttpSession objsesion = request.getSession(true);
                 //Se envía a la instancia de HttpSession el valor de la variable usuario una vez que ya ha sido validado. 
                 objsesion.setAttribute("usuario", us.getNombre());
-                response.sendRedirect("menu.jsp");
+                response.sendRedirect("Interfaz/admin/menuUsuarios.jsp");
             }else
                 //Si el resultado de la consulta es false se redirecciona a la página inicial que es el index.html
                 response.sendRedirect("index.jsp");
